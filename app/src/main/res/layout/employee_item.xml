@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/ll_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/edit_Image"
+            android:orientation="vertical"
+            android:padding="@dimen/_10sdp">
+
+            <TextView
+                android:id="@+id/employee_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ashish Rawat"
+                android:textColor="#000000"
+                android:textSize="@dimen/_13sdp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/employee_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ashishrawat2911@gmail.com" />
+
+            <TextView
+                android:id="@+id/employee_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="9810427697" />
+
+            <TextView
+                android:id="@+id/employee_age"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="201301" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/edit_Image"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:src="@drawable/ic_baseline_edit_24" />
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
