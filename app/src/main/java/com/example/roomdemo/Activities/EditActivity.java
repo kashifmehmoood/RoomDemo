@@ -14,7 +14,7 @@ import com.example.roomdemo.Model.Employee;
 import com.example.roomdemo.R;
 
 public class EditActivity extends AppCompatActivity {
-    EditText name, email, number, age;
+    EditText name, email, number, age,city;
     Button btn_save;
     AppDatabase appDatabase;
     Intent intent;
@@ -29,6 +29,7 @@ public class EditActivity extends AppCompatActivity {
         email = findViewById(R.id.edit_email);
         number = findViewById(R.id.edit_number);
         age = findViewById(R.id.edit_age);
+        city = findViewById(R.id.edit_city);
         btn_save = findViewById(R.id.btn_save);
         appDatabase = AppDatabase.getInstance(getApplicationContext());
 
@@ -83,13 +84,15 @@ public class EditActivity extends AppCompatActivity {
         email.setText(employee.getEmail());
         number.setText(employee.getNumber());
         age.setText(employee.getAge());
+        city.setText(employee.getCity());
     }
 
     private void saveData() {
         Employee employee = new Employee(name.getText().toString(),
                 email.getText().toString(),
                 number.getText().toString(),
-                age.getText().toString());
+                age.getText().toString(),
+                city.getText().toString());
         AppExecutors.getInstance().diskIO().execute(new Runnable() {
             @Override
             public void run() {

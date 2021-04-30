@@ -16,12 +16,15 @@ public class Employee {
     String number;
     @ColumnInfo(name = "age")
     String age;
+    @ColumnInfo(name = "city")
+    String city;
 
-    public Employee(String name, String email, String number, String age) {
+    public Employee(String name, String email, String number, String age, String city) {
         this.name = name;
         this.email = email;
         this.number = number;
         this.age = age;
+        this.city=city;
     }
 
     @Ignore
@@ -73,4 +76,11 @@ public class Employee {
         return age;
     }
 
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public String getCity() {
+        return city;
+    }
 }
